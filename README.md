@@ -6,3 +6,6 @@ The code is missing queries, mutations and subscriptions. For this reason it wil
 
 npm install<br/>
 npm run dev
+
+**IMPORTANT NOTE**
+There is a vulnerability in webpack-dev-server verison 2.
