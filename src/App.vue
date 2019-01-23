@@ -37,7 +37,6 @@ import gql from "graphql-tag";
 
 
 export default {
-  // TODO: Add query on reconnect
   name: "app",
   data() {
     return {
@@ -52,11 +51,23 @@ export default {
     // binds to 'messages' data property on vue instance
     messages: {
       query: gql`
-       your query
+      query{
+        query_name {
+          field1
+          field2
+          fieldN
+        }
+      }
       `,
       subscribeToMore: {
         document: gql`
-          your subscription
+           subscription {
+            subscription_name {
+              field1
+              field2
+              fieldN
+            }
+          }
         `,
         // Mutate the previous result
         updateQuery: (previousResult, { subscriptionData }) => {
@@ -81,7 +92,13 @@ export default {
       this.msg_text = null;
       this.$apollo.mutate({
         mutation: gql`
-          your mutation
+          mutation($name: String!, $text: String!) {
+            mutation_name(name: $name, text: $text) {
+              field1
+              field2
+              fieldN
+            }
+          }
         `,
         // Parameters
         variables: {
