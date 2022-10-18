@@ -8,4 +8,4 @@ npm install<br/>
 npm run dev
 
 **IMPORTANT NOTE**
-There is a vulnerability in webpack-dev-server verison 2.
+There is a vulnerability in webpack-dev-server version 2.
